@@ -71,7 +71,6 @@ The **Fact Constellation Schema** was used to design the data model. This schema
 ![Data Model Screenshot]("")
 
 ---
-
 ## DAX Formulas
 Key DAX formulas used for analysis:
 
@@ -94,6 +93,7 @@ Key DAX formulas used for analysis:
   RevPAR = DIVIDE(
     SUM(fact_bookings[revenue_realized]), 
     SUM(fact_aggregated_bookings[capacity]), 0)
+    
 6. **Occupied_Rooms**
    Occupied Rooms = COUNTROWS(FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out"))
 
