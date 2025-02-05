@@ -89,8 +89,7 @@ Key DAX formulas used for analysis:
    ADR = DIVIDE(
     SUM(fact_bookings[revenue_realized]), 
     COUNTROWS(FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out")), 
-    0
-)
+    0)
 5. **RevPAR [Revenue per Available Room]:**
    ```DAX
   RevPAR = DIVIDE(
@@ -102,8 +101,7 @@ Key DAX formulas used for analysis:
  Occupied Rooms = COUNTROWS(
     FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out"))
 7. **Occupancy_Rate**
- ``` DAX
-   Occupancy Rate (%) = DIVIDE(
+  ``` DAX
+    Occupancy Rate (%) = DIVIDE(
     SUM(fact_aggregated_bookings[successful_bookings]), 
-    SUM(fact_aggregated_bookings[capacity]), 
-    0) * 100
+    SUM(fact_aggregated_bookings[capacity]), 0) * 100
