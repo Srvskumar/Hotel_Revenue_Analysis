@@ -68,7 +68,7 @@ The **Fact Constellation Schema** was used to design the data model. This schema
 - **Performance Optimization**: Reduces redundancy by sharing dimensions across facts.
 - **Enhanced Analysis**: Facilitates complex queries and advanced reporting.
 
-![Data Model Screenshot]("")
+![image alt](https://github.com/Srvskumar/Hotel_Revenue_Analysis/blob/e57eb9b9b56927a78d9b9fec94263b9bdb566f42/Screenshot%202025-02-05%20141236.png)
 
 ---
 ## DAX Formulas
