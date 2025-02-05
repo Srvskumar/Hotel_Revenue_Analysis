@@ -1,5 +1,5 @@
 # Hotel Revenue and Occupancy Analysis Dashboard
-
+(![Dashboard Screenshot](screenshots/dashboard.png))
 ## Overview
 This project is an end-to-end analysis of hotel revenue, occupancy trends, and booking behavior, focusing on actionable insights for optimizing hotel operations. The process involves **data transformation**, **data modeling (Fact Constellation Schema)**, and **visualization** using Power BI, with advanced DAX calculations and an interactive dashboard.
 
