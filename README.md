@@ -68,7 +68,7 @@ The **Fact Constellation Schema** was used to design the data model. This schema
 - **Performance Optimization**: Reduces redundancy by sharing dimensions across facts.
 - **Enhanced Analysis**: Facilitates complex queries and advanced reporting.
 
-![Data Model Screenshot](screenshots/data_model.png)
+![Data Model Screenshot]("C:\Users\srvsk\OneDrive\Pictures\Screenshots\Screenshot 2025-02-05 141236.png")
 
 ---
 
