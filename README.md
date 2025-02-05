@@ -86,31 +86,24 @@ Key DAX formulas used for analysis:
    DIVIDE(SUMX(FILTER('Bookings', 'Bookings'[Room Type] IN {"Luxury", "Standard"}), 'Bookings'[Revenue]), [Total Revenue], 0)
 4. **ADR [Average_Daily_Revenue]**
    ```DAX
-   ADR = 
-DIVIDE(
+   ADR = DIVIDE(
     SUM(fact_bookings[revenue_realized]), 
     COUNTROWS(FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out")), 
     0
 )
 5. **RevPAR [Revenue per Available Room]:**
    ```DAX
-RevPAR = 
-DIVIDE(
+  RevPAR = DIVIDE(
     SUM(fact_bookings[revenue_realized]), 
     SUM(fact_aggregated_bookings[capacity]), 
-    0
-)
-6.  **Occupied_Rooms**
+    0)
+6. **Occupied_Rooms**
   ```DAX
-Occupied Rooms = 
-COUNTROWS(
-    FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out")
-)
+ Occupied Rooms = COUNTROWS(
+    FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out"))
 7. **Occupancy_Rate**
  ``` DAX
-Occupancy Rate (%) = 
-DIVIDE(
+   Occupancy Rate (%) = DIVIDE(
     SUM(fact_aggregated_bookings[successful_bookings]), 
     SUM(fact_aggregated_bookings[capacity]), 
-    0
-) * 100
+    0) * 100
