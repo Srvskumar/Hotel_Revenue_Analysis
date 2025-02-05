@@ -55,13 +55,14 @@ The **Fact Constellation Schema** was used to design the data model. This schema
 
 ### Key Components of the Schema
 1. **Fact Tables**:
-   - `Bookings Fact Table`: Contains measures like `Total Bookings`, `Revenue`, and `Cancellations`.
-   - `Occupancy Fact Table`: Tracks `Occupied Rooms`, `Vacant Rooms`, and `Occupancy Rates`.
+   - `Bookings Fact Table`: Contains measures like `booking_id`, `Revenue`, `Cancellations`, `Checkin_Date`, `CheckOut_Date`,`Booking_date`, `Booking_status`, `Room_Category`, `Booking_ID`, 
+     `No_Guests`,`Booking_Category`, `Rating_Given`,`Revenue_Generated` and `Revenue_Realized`.
+   - `Fact_Aggregated_Booking`: Tracks `Property_ID`, `Capacity`,  `Checkin_Date`,`Room_Category` and `Successful_Booking`.
 
 2. **Shared Dimension Tables**:
-   - `Date Dimension Table`: Provides detailed date-based attributes (e.g., `Month`, `Year`, `Week`).
-   - `Customer Dimension Table`: Includes customer demographics and booking behavior.
-   - `Room Type Dimension Table`: Details on room categories such as `Luxury`, `Standard`, and `Budget`.
+   - `Date Dimension Table`: Provides detailed date-based attributes (e.g., `Date`,`MMM-YYY`,`Date_Type`).
+   - `Hotel Dimension Table`: Includes `Property_ID`,`Property_Name`,`Category` and `City`.
+   - `Rooms Dimension Table`: Details on room categories such as `Room_ID` and `Room_Category`.
 
 ### Advantages of Fact Constellation
 - **Flexibility**: Supports analysis across multiple business processes (e.g., occupancy and revenue).
@@ -94,6 +95,7 @@ Key DAX formulas used for analysis:
     SUM(fact_bookings[revenue_realized]), 
     SUM(fact_aggregated_bookings[capacity]), 0)
 6. **Occupied_Rooms**
+   ```DAX
    Occupied Rooms = COUNTROWS(FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out"))
 
 ## Hospitality_Insights
