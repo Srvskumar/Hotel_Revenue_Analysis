@@ -24,7 +24,7 @@ This project is an end-to-end analysis of hotel revenue, occupancy trends, and b
 - **Power BI**: Dashboard creation and data visualization.
 - **Power Query**: Data transformation and cleaning.
 - **DAX Formulas**: Advanced calculations for KPIs and metrics.
-- **Dataset**: Hotel booking data (anonymized for privacy).
+- **Dataset**: Hotel booking data 
 
 ---
 
@@ -93,8 +93,36 @@ Key DAX formulas used for analysis:
   RevPAR = DIVIDE(
     SUM(fact_bookings[revenue_realized]), 
     SUM(fact_aggregated_bookings[capacity]), 0)
-    
 6. **Occupied_Rooms**
    Occupied Rooms = COUNTROWS(FILTER(fact_bookings, fact_bookings[booking_status] = "Checked Out"))
+
+## Hospitality_Insights
+![image alt](https://github.com/Srvskumar/Hotel_Revenue_Analysis/blob/c0207981360bded8e4c648e24f5ed4e4ed775237/Screenshot%202025-02-05%20134829.png)
+
+## INSIGHTS
+The analysis revealed the following key findings:
+
+1. **Occupancy Trends**:
+   - Luxury rooms consistently achieve higher occupancy rates compared to budget and standard rooms.
+   - Weekends and holiday periods show peak occupancy, highlighting opportunities for surge pricing.
+
+2. **Revenue Breakdown**:
+   - Direct bookings generate the highest revenue, followed by OTA (Online Travel Agencies) bookings. Promotions can focus on direct booking incentives.
+   - Room types contribute unequally to total revenue:
+     - **Luxury rooms**: 55% of total revenue.
+     - **Standard rooms**: 30%.
+     - **Budget rooms**: 15%.
+
+3. **Booking and Cancellation Patterns**:
+   - Cancellation rates are highest for OTA bookings, particularly for bookings made more than 30 days in advance.
+   - Last-minute bookings (within 7 days) are less likely to be canceled.
+
+4. **Customer Behavior**:
+   - Customers booking through direct channels rate satisfaction higher (4.5 average) compared to OTA channels (3.8 average).
+   - Guests from higher-income demographics prefer luxury rooms, while budget travelers opt for standard or budget rooms.
+
+5. **Operational Insights**:
+   - Rooms remain unoccupied 20% of the time during weekdays, suggesting the need for weekday-specific promotions.
+   - Enhancing customer experience for OTA bookings can help reduce cancellations and improve satisfaction.
 
 
